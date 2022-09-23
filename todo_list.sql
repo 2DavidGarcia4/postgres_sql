@@ -8,38 +8,41 @@ CREATE TABLE "todo_list" (
 );
 
 
-insert into users ( 
+insert into todo_list ( 
 	id,
-	name,
-	email,
-	age,
-	height
+	title,
+	created_at,
+	description,
+	author_name,
+	is_completed
 ) values (
 	'ac53a56f-da26-44b3-9f13-929f168d520c', 
-	'David', 
-	'david@gamil.com', 
-	18,
-	1.80
+	'Tarea 1', 
+	'Solucionar problemas de coneccion.', 
+	'David',
+	true
 ),
 (
-	'50a570d5-3613-4de0-9866-8d1e7f9b5340', 
-	'jorge', 
-	'Jorge@gamil.com', 
-	20,
-	1.85
+	'50a570d5-3613-4de0-9866-8d1e7f9b5340',  
+	'Tarea 2', 
+	'22-09-2022'
+	'Estilizar pagina.', 
+	'Juan',
+	true
 ),
 (
-	'cf687286-2622-4e33-868b-eb0ca140ac27', 
-	'maria', 
-	'Maria@gamil.com', 
-	24,
-	1.74
+	'50a570d5-3613-4de0-9866-8d1e7f9b5340',  
+	'Tarea 3', 
+	'22-09-2022'
+	'Crear base de datos con en mongodb.', 
+	'Maria',
+	false
 );
 
 -- GET todos los usuarios
 
-select * from users;
+select * from todo_list;
 
-select id, name, age from users;
+select id, title, description, is_completed from todo_list;
 
-select id, name, age from users where age < 24;
+select id, title, description, is_completed from todo_list where is_completed = true;
