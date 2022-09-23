@@ -39,7 +39,6 @@ insert into todo_list (
 	false
 );
 
--- GET todos los usuarios
 
 select * from todo_list;
 
